@@ -6,7 +6,7 @@
 /*   By: mel-bouh <mel-bouh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 19:48:40 by mel-bouh          #+#    #+#             */
-/*   Updated: 2023/11/03 15:16:00 by mel-bouh         ###   ########.fr       */
+/*   Updated: 2023/11/07 00:02:28 by mel-bouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = 0;
 	len = ft_strlen(s);
 	str = (char *)malloc(len + 1);
-	if (str == NULL)
+	if (!str || !f)
 		return (NULL);
 	while (i < len)
 	{

@@ -6,7 +6,7 @@
 /*   By: mel-bouh <mel-bouh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 15:30:21 by mel-bouh          #+#    #+#             */
-/*   Updated: 2023/11/05 21:54:41 by mel-bouh         ###   ########.fr       */
+/*   Updated: 2023/11/06 23:03:03 by mel-bouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)s);
 		s++;
 	}
-	if (c == 0)
+	if (*s == (char)c)
 		return ((char *)s);
-	return (NULL);
+	else
+		return (NULL);
 }

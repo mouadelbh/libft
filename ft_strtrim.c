@@ -6,14 +6,13 @@
 /*   By: mel-bouh <mel-bouh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 20:23:41 by mel-bouh          #+#    #+#             */
-/*   Updated: 2023/11/06 18:03:39 by mel-bouh         ###   ########.fr       */
+/*   Updated: 2023/11/06 22:40:29 by mel-bouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
-int	check(char const *set, char s1)
+static int	check(char const *set, char s1)
 {
 	if (!set)
 		return (0);
@@ -36,7 +35,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	i = 0;
 	if (!s1 || !set)
 		return (NULL);
-	size = strlen(s1);
+	size = ft_strlen(s1);
 	while (check(set, *(s1 + i)) && *(s1 + i))
 		i++;
 	while (check(set, *(s1 + (size - 1))) && size > i)

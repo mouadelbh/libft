@@ -6,13 +6,13 @@
 /*   By: mel-bouh <mel-bouh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 20:49:16 by mel-bouh          #+#    #+#             */
-/*   Updated: 2023/11/06 19:51:36 by mel-bouh         ###   ########.fr       */
+/*   Updated: 2023/11/06 22:39:22 by mel-bouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_words(const char *s, char c)
+static int	count_words(const char *s, char c)
 {
 	int	i;
 	int	count;
@@ -33,7 +33,7 @@ int	count_words(const char *s, char c)
 	return (count);
 }
 
-char	*cat_words(const char *s, char c)
+static char	*cat_words(const char *s, char c)
 {
 	char	*word;
 	int		i;

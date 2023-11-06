@@ -6,7 +6,7 @@
 /*   By: mel-bouh <mel-bouh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 17:47:26 by mel-bouh          #+#    #+#             */
-/*   Updated: 2023/11/05 22:07:26 by mel-bouh         ###   ########.fr       */
+/*   Updated: 2023/11/06 22:50:58 by mel-bouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,13 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	while (n--)
+	if (n == 0)
+		return (0);
+	while (*s1 == *s2 && *s1 && *s2 && n > 1)
 	{
-		if (*s1 != *s2)
-			return (*s1 - *s2);
 		s1++;
 		s2++;
+		n--;
 	}
-	return (0);
+	return (((unsigned char)(*s1) - (unsigned char)(*s2)));
 }

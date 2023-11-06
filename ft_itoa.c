@@ -6,13 +6,13 @@
 /*   By: mel-bouh <mel-bouh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 19:47:42 by mel-bouh          #+#    #+#             */
-/*   Updated: 2023/11/06 17:08:13 by mel-bouh         ###   ########.fr       */
+/*   Updated: 2023/11/06 22:38:21 by mel-bouh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lennb(long nl)
+static int	ft_lennb(long nl)
 {
 	int	i;
 
