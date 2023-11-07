@@ -6,7 +6,7 @@
 #    By: mel-bouh <mel-bouh@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/03 16:05:43 by mel-bouh          #+#    #+#              #
-#    Updated: 2023/11/07 00:28:44 by mel-bouh         ###   ########.fr        #
+#    Updated: 2023/11/07 16:03:33 by mel-bouh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,18 +23,20 @@ BSRC = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c 
 	ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 OBJT = $(SRC:.c=.o)
 BOBJT = $(BSRC:.c=.o)
+HEADER = libft.h
 
 all: $(NAME)
 
 $(NAME): $(OBJT)
 	@ar rcs $(NAME) $?
-bonus: $(OBJT) $(BOBJT)
+bonus: $(BOBJT)
 	@ar rcs $(NAME) $?
 %.o: %.c
-	@gcc $(FLAGS) -c $?
+	@gcc $(FLAGS) -I $(HEADER) -c $?
 clean:
 	@rm -rf $(OBJT) $(BOBJT)
 fclean: clean
 	@rm -rf $(NAME)
 re: fclean all
+
 .PHONY: all bonus clean fclean re
