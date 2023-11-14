@@ -32,7 +32,7 @@ $(NAME): $(OBJT)
 bonus: $(BOBJT)
 	@ar rcs $(NAME) $?
 %.o: %.c
-	@gcc $(FLAGS) -I $(HEADER) -c $?
+	@cc $(FLAGS) -I $(HEADER) -c $?
 clean:
 	@rm -rf $(OBJT) $(BOBJT)
 fclean: clean
